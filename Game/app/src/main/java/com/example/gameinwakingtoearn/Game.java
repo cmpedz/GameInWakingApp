@@ -52,8 +52,9 @@ public class Game extends SurfaceView implements SurfaceHolder.Callback {
         }
 
 
-        this.myStore=new MyStore(this.getScreenWidth()-300,this.getScreenHeight()-500,context);
+
         this.mybag=new MyBag(50,this.getScreenHeight()-500,context);
+        this.myStore=new MyStore(this.getScreenWidth()-300,this.getScreenHeight()-500,context,this.mybag);
 
 
         setFocusable(true);

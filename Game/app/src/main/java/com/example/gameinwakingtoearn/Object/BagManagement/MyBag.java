@@ -7,7 +7,7 @@ import com.example.gameinwakingtoearn.Object.GameObject;
 import com.example.gameinwakingtoearn.R;
 
 public class MyBag extends GameObject {
-    BagList itemlist;
+    private BagList itemlist;
     public MyBag(float x, float y, Context context) {
         super(x, y, context, R.drawable.store,0, 0);
         itemlist=new BagList(context,x,y);
@@ -34,6 +34,10 @@ public class MyBag extends GameObject {
                 itemlist.setIs_quit(false);
             }
         }
+    }
+
+    public BagList getBagList(){
+        return this.itemlist;
     }
 
 }
